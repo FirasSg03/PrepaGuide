@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{%block nav%}
+<nav id="nav">
+    <ul class="links">
+        <li class="active"><a href="{{ url_for('main.inputs') }}">Inputs</a></li>
+        <li><a href="{{ url_for('main.index') }}">Home</a></li>
+    </ul>
+</nav>
+{%endblock%}
+
+{%block main%}
+<div class="col-12">
+    <h2>Choisir votre Filiere</h2>
+    <select name="filiere" id="filiere" placeholder="filiere" required>
+        <option value="">filiere</option>
+        <option value="1">MP</option>
+        <option value="1">PC</option>
+        <option value="1">BG</option>
+    </select>
+</div>
+
+<div class="col-12">
+    <h2>Choisir votre Gouvernorat</h2>
+    <select name="location" id="location" placeholder="gouvernorat" required>
+        <option value="">gouvernorat</option>
+        <option value="Ariana">Ariana</option>
+        <option value="Béja">Béja</option>
+        <option value="Ben Arous">Ben Arous</option>
+        <option value="Bizerte">Bizerte</option>
+        <option value="Gabès">Gabès</option>
+        <option value="Gafsa">Gafsa</option>
+        <option value="Jendouba">Jendouba</option>
+        <option value="Kairouan">Kairouan</option>
+        <option value="Kasserine">Kasserine</option>
+        <option value="Kébili">Kébili</option>
+        <option value="Le Kef">Le Kef</option>
+        <option value="Mahdia">Mahdia</option>
+        <option value="La Manouba">La Manouba</option>
+        <option value="Médenine">Médenine</option>
+        <option value="Monastir">Monastir</option>
+        <option value="Nabeul">Nabeul</option>
+        <option value="Sfax">Sfax</option>
+        <option value="Sidi Bouzid">Sidi Bouzid</option>
+        <option value="Siliana">Siliana</option>
+        <option value="Sousse">Sousse</option>
+        <option value="Tataouine">Tataouine</option>
+        <option value="Tozeur">Tozeur</option>
+        <option value="Tunis">Tunis</option>
+        <option value="Zaghouan">Zaghouan</option>
+    </select>
+</div>
+
+<div class="col-6 col-12-xsmall">
+    <h2>Inserer votre rang</h2>
+    <input type="text" name="rank" id="rank" placeholder="rang"  required/>
+</div>
+{%endblock%}
+
+{%block footer%}
+<footer id="footer">
+    <section>
+        <li><a href="{{ url_for('main.detail') }}" class="button primary fit">Proceed</a></li>
+    </section>
+</footer>
+{%endblock%}

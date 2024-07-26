@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{%block intro%}
+<div id="intro">
+    <h1>Welcome, <br> Prepa Guide </h1>
+    <p>une application qui facilite la procedure d'orientation pour les etudiants tunisiens en cycle preparatoire aux etudes ingenieurs</p>
+    <ul class="actions">
+        <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+    </ul>
+</div>
+{%endblock%}
+
+{%block nav%}
+<nav id="nav">
+    <ul class="links">
+        <li class="active"><a href="{{ url_for('main.index') }}">Home</a></li>
+        <li><a href="{{ url_for('main.inputs') }}">Inputs</a></li>
+    </ul>
+</nav>
+{%endblock%}
+
+{%block main%}
+<section class="post">
+    <header class="major">
+        <h1><a href="#" alt="telecharger le guide">Guide du candidat</a></h1>
+    </header>
+
+    <ul class="links"> 
+        <li><a href="#Q1" class="scrolly">1. Comment choisir sa filière ou son établissement de formation d'ingénieurs?</a></li>
+        <li><a href="#Q2" class="scrolly">2. Quelle importance accorder à la fiche de confirmation ?</a></li>
+        <li><a href="#Q3" class="scrolly">3. Comment s'effectue l'affectation définitive des candidats aux établissements de formation d'ingénieurs ?</a></li>
+    </ul>    
+</section> 
+
+<header>
+    <h2 id="Q1">1. Comment choisir sa filière ou son établissement de formation d'ingénieurs? </h2>
+    <p>Lors de la proclamation des résultats d'admission, les candidats de la liste des admis et de la liste 
+        complémentaire doivent remplir des fiches de choix des filières des établissements concernés par chaque 
+        concours, disponibles sur le <a href="https://concours-ingenieurs.rnu.tn">site</a> dans les délais qui sont mentionnés 
+        sur le même site. </p>
+    <p>Quatre formes de fiches de choix sont mises à la disposition des candidats de chaque concours, Le candidat numérote les filières 
+        des institutions choisies par ordre de préférence.
+        <div class="row">
+            <ol>
+                <li>Fiche destinée aux candidats classés parmi les 25% les plus méritants de la liste des admis. 
+                    Ces candidats sont tenus de choisir un nombre minimal de filières parmi l'ensemble des filières 
+                    des institutions proposées. </li>
+                <li>Fiche concernant les candidats classés entre 25% et 60% de la liste des admis. Ces candidats 
+                    sont obligés d'y inscrire un nombre de choix, supérieur au nombre minimal de choix demandé 
+                    au groupe de candidats cité précédemment. </li>
+                <li>Fiche réservée pour le reste des candidats de la liste des admis, classés entre 60% 
+                    et 100%. Ces candidats doivent nécessairement classer toutes les filières ouvertes des 
+                    différents établissements concernés par le concours. </li>
+                <li>Fiche destinée aux candidats de la liste complémentaire qui sont tenus de classer toutes les 
+                    filières ouvertes des différents établissements concernés par le concours. </li>
+            </ol>
+        </div>   
+    </p>    
+</header>
+<header>
+    <h2 id="Q2">2. Quelle importance accorder à la fiche de confirmation ? </h2>
+    <p>Lors de la proclamation des résultats d'affectation, les candidats admis et affectés à une filière d'un 
+        établissement donné sont tenus, sous peine de perdre le bénéfice du résultat obtenu, de confirmer, sur 
+        le <a href="https://concours-ingenieurs.rnu.tn">site</a>, le choix retenu ainsi que les filières pour lesquelles ils figurent 
+        sur leurs listes d'attente, dans les délais qui sont mentionnés sur le même site. 
+        <p>Les candidats de la liste complémentaire sont obligés de confirmer leurs places dans les listes d'attente 
+        sous peine de perdre le bénéfice d'une possible affectation suite aux désistements de certains candidats 
+        de la liste des admis. 
+        Le candidat qui ne procède pas à cette opération est écarté du concours et perd le résultat obtenu. </p>
+    </p>    
+    </header>
+<header>
+    <h2 id="Q3">3. Comment s'effectue l'affectation définitive des candidats aux établissements de formation d'ingénieurs ? </h2>
+    <p>A l'expiration du délai de confirmation et sur la base des confirmations reçues, le jury des concours arrête 
+        la liste définitive des admis affectés aux différentes filières proposées, et ce dans la limite des places 
+        ouvertes, en faisant bénéficier éventuellement les candidats de la liste des admis d'un meilleur choix et les candidats les mieux classés de la liste complémentaire 
+        des places non pourvues. <b>La validité des listes d'attente s'achève avec la proclamation des résultats 
+        définitifs.</b></p>
+    <p>
+        Le traitement des confirmations se déroule en tenant compte des trois cas de figure suivants
+        <div class="row">
+            <ul>
+                <li><b>Candidat déclaré admis à une filière de formation d'ingénieurs et ne figurant sur aucune 
+                    liste d'attente:</b> si le candidat confirme son admission, il est affecté à cette filière. Dans le cas 
+                    contraire il sera éliminé du concours. </li>
+                <li><b>Candidat déclaré admis à une filière de formation d'ingénieurs et inscrit sur une ou 
+                    plusieurs listes d'attente:</b> trois cas de confirmation peuvent se présenter
+                    <div>
+                        <ul>
+                            <li>le candidat confirme uniquement son admission à la filière et renonce aux listes 
+                                d'attente : il sera alors affecté à la filière à laquelle il est déclaré admis. </li>   
+                            <li>le candidat confirme son admission ainsi que son inscription sur une ou plusieurs 
+                                listes d'attente : si le nombre de places non pourvues le permet, il sera affecté au meilleur 
+                                choix possible de sa liste de vœux parmi les résultats confirmés. Dans le cas contraire, il sera 
+                                affecté à la filière à laquelle il est déclaré admis. </li>    
+                            <li>le candidat ne confirme pas son admission et confirme seulement son inscription sur 
+                                une ou plusieurs listes d'attente : si le nombre de places non pourvues le permet, il sera 
+                                affecté au meilleur choix possible de sa liste de vœux parmi les résultats confirmés. Dans le 
+                                cas contraire, il sera éliminé du concours. </li>     
+                        </ul>
+                    </div>
+                </li>
+                <li><b>Candidat uniquement inscrit sur une ou plusieurs listes d'attente :</b> s'il confirme son 
+                    inscription sur une ou plusieurs de ces listes et si le nombre de places non pourvues le permet, 
+                    il sera affecté au meilleur choix possible de sa liste de vœux parmi les résultats confirmés. Dans 
+                    le cas contraire, il sera éliminé du concours. </li>
+            </ul>
+        </div>    
+    </p>
+    <p>Il est important de rappeler que si, après confirmation, un candidat est affecté à une filière de 
+        formation d'ingénieurs, il ne pourra plus se représenter aux concours nationaux d'entrée aux 
+        cycles de formation d'ingénieurs. Il ne pourra pas non plus demander une mutation vers une autre 
+        école de formation d'ingénieurs ou une autre filière. </p>
+    <p>
+        Les résultats définitifs sont portés à la connaissance des candidats par affichage sur le site <a href="https://concours-ingenieurs.rnu.tn">site</a>. Ainsi,
+        <ul>
+            <li>au secrétariat des concours</li>
+            <li>à chaque établissement, centre d'examen</li>
+        </ul>
+        <b>Les résultats définitifs ne sont susceptibles d'aucun changement pour quelque motif que ce soit.</b>
+    </p>    
+</header>
+{%endblock%}
+
+{%block footer%}
+<footer id="footer">
+    <section>
+        <li><a href="{{ url_for('main.inputs') }}" class="button primary fit">Proceed</a></li>
+    </section>
+ </footer>
+{%endblock%}
