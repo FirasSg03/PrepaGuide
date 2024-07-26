@@ -49,7 +49,7 @@ pip-log.txt
 Thumbs.db
 
 # Static files
-static/
+staticfiles/
 
 # Local configuration
 *.local
