@@ -4,6 +4,7 @@
 		<title>Prepa Guide Web App</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
 		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css') }}" />
 		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
 	</head>
@@ -13,17 +14,17 @@
 
                 <!-- Intro -->
                 {%block intro%}{%endblock%}
+				
 				<!-- Header -->
 					<header id="header">
-						<a href="{{ url_for('main.index') }}" class="logo">Prepa Guide</a>
+						<a href="{{ url_for('main.index') }}" class="logo">Prepa_Guide</a>
 					</header>
-
-				<!-- Nav -->
+			
                 {%block nav%}{%endblock%}
 
 				<!-- Main -->
 					<div id="main">
-                        {%block main%}{%endblock%}
+						{%block main%}{%endblock%}
 					</div>
                 
                 <!-- Footer -->
@@ -32,6 +33,7 @@
 				<!-- Copyright -->
 					<div id="copyright">
 						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Untitled</li><li>Favicon: <a href="https://www.flaticon.com/free-icons/technology" title="technology icons">Technology icons created by Freepik - Flaticon</a></li></ul>
 					</div>
 
 			</div>

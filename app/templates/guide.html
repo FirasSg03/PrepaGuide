@@ -1,22 +1,14 @@
 {% extends "base.html" %}
 
-{%block intro%}
-<div id="intro">
-    <h1>Welcome, <br> Prepa Guide </h1>
-    <p>une application qui facilite la procedure d'orientation pour les etudiants tunisiens en cycle preparatoire aux etudes ingenieurs</p>
-    <ul class="actions">
-        <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-    </ul>
-</div>
-{%endblock%}
-
 {%block nav%}
-<nav id="nav">
-    <ul class="links">
-        <li class="active"><a href="{{ url_for('main.index') }}">Home</a></li>
-        <li><a href="{{ url_for('main.inputs') }}">Inputs</a></li>
-    </ul>
-</nav>
+	<!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li><a>TBE</a></li>
+            <li class="active"><a href="{{ url_for('main.guide') }}">Guide</a></li>
+            <li><a href="{{ url_for('main.learn_more') }}">Learn More</a></li>
+        </ul>
+    </nav>
 {%endblock%}
 
 {%block main%}
@@ -120,12 +112,4 @@
         <b>Les résultats définitifs ne sont susceptibles d'aucun changement pour quelque motif que ce soit.</b>
     </p>    
 </header>
-{%endblock%}
-
-{%block footer%}
-<footer id="footer">
-    <section>
-        <li><a href="{{ url_for('main.inputs') }}" class="button primary fit">Proceed</a></li>
-    </section>
- </footer>
 {%endblock%}

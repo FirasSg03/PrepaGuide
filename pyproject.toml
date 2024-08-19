@@ -1,0 +1,22 @@
+[project]
+name = "app"
+version = "1.0.0"
+description = "Web App to help orientation process of tunisian prepa students"
+dependencies = [
+    "flask",
+]
+
+#[tool.pytest.ini_options]
+#testpaths = ["tests"]
+#
+#[tool.coverage.run]
+#branch = true
+#source = ["flaskr"]
+######## THEN RUN pytest in CMD
+######## coverage run -m pytest
+######## coverage report
+######## coverage html (open htmlcov/index.html)
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"

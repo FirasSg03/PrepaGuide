@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{%block nav%}
+	<!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li><a>TBE</a>
+
+            </li>
+            <li><a href="{{ url_for('main.guide') }}">Guide</a></li>
+            <li class="active"><a href="{{ url_for('main.learn_more') }}">Learn More</a></li>
+        </ul>
+    </nav>
+{%endblock%}
+
+{%block main%}
+learn more page
+1. rang pour admission likelihood
+2. gov pour distance
+{%endblock%}
+
+{%block footer%}
+<footer id="footer">
+    <section>
+        <!-- Takes to home page -->
+        <li><a class="button primary fit">Home</a></li>
+    </section>
+ </footer>
+{%endblock%}

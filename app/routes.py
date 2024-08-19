@@ -1,21 +1,27 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, redirect, render_template, request, url_for
+from flask_login import login_required, current_user
+from .models import User, Table
 
-#define blueprint
 bp = Blueprint('main', __name__)
 
-@bp.route('/')
+@bp.route('/guide')
+def guide():
+    return render_template('/guide.html')
+
+@bp.route('/learn_more')
+def learn_more():
+    return render_template('/learn_more.html')
+
+@bp.route('/') 
+#@login_required
 def index():
-    return render_template('index.html')
-
-@bp.route('/inputs')
-def inputs():
-    return render_template('inputs.html')
-
-@bp.route('/detail', methods=["GET", "POST"])
-def detail():
-    # captures user data
-    filiere = request.form.get('filiere')
-    rank = request.form.get('rank')
-    location = request.form.get('location')
+    #user = current_user.to_dict()
+    user = {
+                "id": 1, 
+                "username": "username",
+                "location": "tunis",
+                "filiere": "MP",
+                "rank": 1
+                }
     
-    return render_template('detail.html')
+    return render_template('filter/index.html', user=user)

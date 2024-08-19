@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{%block nav%}
+<nav id="nav">
+    <ul class="links">
+        <li class="active"><a>Sign UP</a></li>
+        <li><a href="{{ url_for('main.guide') }}">Guide</a></li>
+        <li><a href="{{ url_for('main.learn_more') }}">Learn More</a></li>
+    </ul>
+</nav>
+{%endblock%}
+
+{%block main%}
+<h2>SIGN UP</h2>
+<form method="POST" action="">
+    <blockquote>
+        {% for message in get_flashed_messages() %}
+  			<div>{{ message }}</div>
+  		{% endfor %}
+    </blockquote>
+    <div class="row gtr-uniform">
+        <!-- USERNAME -->
+        <div class="col-12 -xsmall">
+            <label for="username">USERNAME</label>
+            <input type="text" name="username" id="username" placeholder="username" required/>
+        </div>
+
+        <!-- PASSWORD 1 -->
+        <div class="col-12 -xsmall">
+            <label for="password">Password</label>
+            <input type="Password" name="password" id="password" placeholder="Password" required/>
+        </div>
+
+        <!-- PASSWORD 2 -->
+        <div class="col-12 xsmall">
+            <label for="password">Confirm Password</label>
+            <input type="Password" name="confirm_password" id="confirm_password" placeholder="Password" required/>
+        </div>
+
+        <!-- Gouvernorat -->
+        <div class="col-12">
+            <label for="gouvernorat">GOUVERNORAT</label>
+            <select name="location" id="location" required>
+                <option value="">- Gouvernorat -</option>
+                <option value="Ariana">Ariana</option>
+                <option value="Béja">Béja</option>
+                <option value="Ben Arous">Ben Arous</option>
+                <option value="Bizerte">Bizerte</option>
+                <option value="Gabès">Gabès</option>
+                <option value="Gafsa">Gafsa</option>
+                <option value="Jendouba">Jendouba</option>
+                <option value="Kairouan">Kairouan</option>
+                <option value="Kasserine">Kasserine</option>
+                <option value="Kébili">Kébili</option>
+                <option value="Le Kef">Le Kef</option>
+                <option value="Mahdia">Mahdia</option>
+                <option value="La Manouba">La Manouba</option>
+                <option value="Médenine">Médenine</option>
+                <option value="Monastir">Monastir</option>
+                <option value="Nabeul">Nabeul</option>
+                <option value="Sfax">Sfax</option>
+                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                <option value="Siliana">Siliana</option>
+                <option value="Sousse">Sousse</option>
+                <option value="Tataouine">Tataouine</option>
+                <option value="Tozeur">Tozeur</option>
+                <option value="Tunis">Tunis</option>
+                <option value="Zaghouan">Zaghouan</option>
+            </select>
+        </div>
+        
+        <!-- FILIERE -->
+        <div class="col-12">
+            <label for="filiere">FILIERE</label>
+        </div>
+        <div class="col-4 col-12-small">
+            <input type="radio" id="MP" name="filieres" value="MP" checked>
+            <label for="MP">MP</label>
+        </div>
+        <div class="col-4 col-12-small">
+            <input type="radio" id="PC" name="filieres" value="PC">
+            <label for="PC">PC</label>
+        </div>
+        <div class="col-4 col-12-small">
+            <input type="radio" id="BG" name="filieres" value="BG">
+            <label for="BG">BG</label>
+        </div>
+
+        <!-- RANK -->
+        <div class="col-12 xsmall">
+            <label for="rank">Rang</label>
+            <input type="number" name="rank" id="rank" min=1 step=1 max=2000 placeholder="rang" required/>
+        </div>
+
+        <!-- SIGN UP BUTTON -->
+        <div class="col-12">
+            <ul class="actions fit">
+                <li><button type="submit" class="button primary fit">SIGN UP</button></li>
+            </ul>
+        </div>
+    </div>    
+</form>
+<hr />
+{%endblock%}

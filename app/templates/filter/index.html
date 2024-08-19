@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{%block intro%}
+<div id="intro">
+    <h1>Welcome, <br> Prepa Guide </h1>
+    <p>une application qui facilite la procedure d'orientation pour les etudiants tunisiens en cycle preparatoire aux etudes ingenieurs</p>
+    <ul class="actions">
+        <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+    </ul>
+</div>
+{%endblock%}
+
+{%block nav%}
+<nav id="nav">
+    <ul class="links">
+        <li class="active"><a>Welcome Home</a></li>
+        <li><a href="{{ url_for('main.guide') }}">Guide</a></li>
+        <li><a href="{{ url_for('main.learn_more') }}">Learn More</a></li>
+    </ul>
+</nav>
+{%endblock%}
+
+{% block main %}
+<h1>Home Page of {{user['username']}} you are in the top {{user['rank']}}% </h1>
+<div class="row gtr-uniform">
+    <div class="col-3-col-12">
+        <select name="category" id="category">
+            <option value="all">- Categorie -</option>
+            <option value="Computer Science and IT">Informatique et Technologies de l'Information</option>
+            <option value="Energy, Industrial Engineering and Management">Énergie, Génie Industriel et Management</option>
+            <option value="Mechanical, Electrical and Civil Engineering">Génie Mécanique, Électrique et Civil</option>
+            <option value="Chemical and Biological Engineering">Génie Chimique et Biologique</option>
+            <option value="Agricultural and Environmental Engineering">Génie Agricole et Environnemental</option>
+            <option value="Textile and Material Engineering">Génie Textile et des Matériaux</option>
+            <option value="Mathematics and Statistics">Mathématiques et Statistiques</option>
+            <option value="OTHER"> AUTRE</option>
+        </select>
+    </div>
+    <div class="col-3-col-12">
+        leniency
+    </div>
+    <div class="col-3-col-12">
+        distance
+    </div>
+    <div class="col-3-col-12">
+        school
+    </div>
+
+</div>
+
+<!-- Tableau -->
+<h3>Liste de Choix</h3>
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th>Ecole</th>
+                <th>Filiere</th>
+                <th>Gouvernorat</th>
+                <th>Rang</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Item 1</td>
+                <td>Ante turpis integer aliquet porttitor.</td>
+                <td>29.99</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Item 2</td>
+                <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                <td>19.99</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Item 3</td>
+                <td> Morbi faucibus arcu accumsan lorem.</td>
+                <td>29.99</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Item 4</td>
+                <td>Vitae integer tempus condimentum.</td>
+                <td>19.99</td>
+                <td>29.99</td>
+            </tr>
+            <tr>
+                <td>Item 5</td>
+                <td>Ante turpis integer aliquet porttitor.</td>
+                <td>29.99</td>
+                <td>29.99</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"></td>
+                <td>100.00</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+
+<!-- LOG OUT BUTTON -->
+<div class="col-12">
+    <ul class="actions fit">
+        <li><a href="{{ url_for('main.guide') }}" class="button primary fit">Log Out</a></li>
+    </ul>
+</div>
+    
+{% endblock %}
+
+{%block footer%}{%endblock%}
