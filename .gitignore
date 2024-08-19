@@ -1,73 +1,14 @@
-# Byte-compiled / optimized / DLL files
+.venv/
+
+*.pyc
 __pycache__/
-*.py[cod]
-*$py.class
 
-# C extensions
-*.so
+instance/
 
-# Distribution / packaging
-.Python
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
 dist/
 build/
-*.egg
-
-# Flask files
-instance/
-*.sqlite3
-
-# Pytest
-.cache/
-.tox/
-.coverage
-*.cover
-.hypothesis/
-
-# Environments
-*.env
-.env.*
-venv/
-venv-*
-pip-log.txt
-
-# IDEs and Editors
-.vscode/
-.idea/
-*.swp
-*~
-.project
-.pydevproject
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Static files
-staticfiles/
-
-# Local configuration
-*.local
-
-# Log files
-*.log
-
-# Test reports
-*.htmlcov
-.tox/
-.nox/
-coverage.xml
-*.cover
-
-# Data files
-data/
-
-# Compiled files
-*.compiled
-*.lock
-.lock
+*.egg-info/
