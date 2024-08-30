@@ -24,12 +24,12 @@ class Table(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data = db.Column(db.String(10000))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    
+
 class Data(db.Model):
+    __bind_key__ = 'data'
     id = db.Column(db.Integer, primary_key=True)
     section = db.Column(db.String(2))
     ecole = db.Column(db.String(150))
-    ecole_acronym = db.Column(db.String(10))
     filiere = db.Column(db.String(150))
     location = db.Column(db.String(150))
     category = db.Column(db.String(150))

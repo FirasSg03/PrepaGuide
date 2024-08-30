@@ -13,14 +13,18 @@
 			<div id="wrapper" class="fade-in">
 
                 <!-- Intro -->
-                {%block intro%}{%endblock%}
-				
+				<div id="intro">
+                	{%block intro%}{%endblock%}
+				</div>
 				<!-- Header -->
 					<header id="header">
 						<a href="{{ url_for('main.index') }}" class="logo">Prepa_Guide</a>
 					</header>
 			
-                {%block nav%}{%endblock%}
+				<!-- Nav bar -->
+				<nav id="nav">
+                	{%block nav%}{%endblock%}
+				</div>	
 
 				<!-- Main -->
 					<div id="main">
@@ -28,7 +32,9 @@
 					</div>
                 
                 <!-- Footer -->
-                {%block footer%}{%endblock%} 
+				<div id="footer">
+                	{%block footer%}{%endblock%} 
+				</div>
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -46,6 +52,9 @@
 			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
 			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
 			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+			
+			<!-- Personalized functions -->
+			<script src="{{ url_for('static', filename='assets/js/extra.js') }}"></script>
 
 	</body>
 </html>
