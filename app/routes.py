@@ -14,15 +14,8 @@ def learn_more():
     return render_template('/learn_more.html')
 
 @bp.route('/', methods=('GET', 'POST')) 
-#@login_required
+@login_required
 def index():
-    #user = current_user.to_dict()
-    user = {
-                "id": 1, 
-                "username": "user1",
-                "location": "tunis",
-                "filiere": "MP",
-                "rank": 1100
-                }
-
+    user = current_user.to_dict()
+    
     return render_template('filter/index.html', user=user, ball=ball(user['rank']))

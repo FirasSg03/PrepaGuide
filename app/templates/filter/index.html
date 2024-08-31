@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {%block intro%}
-<h1>Welcome, <br> Prepa Guide </h1>
-<p>une application qui facilite la procedure d'orientation pour les etudiants tunisiens en cycle preparatoire aux etudes ingenieurs</p>
-<ul class="actions">
-    <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-</ul>
+<div id="intro">
+    <h1>Welcome, <br> Prepa Guide </h1>
+    <p>une application qui facilite la procedure d'orientation pour les etudiants tunisiens en cycle preparatoire aux etudes ingenieurs</p>
+    <ul class="actions">
+        <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+    </ul>
+</div>
 {%endblock%}
 
 {%block nav%}
@@ -17,27 +19,110 @@
 {%endblock%}
 
 {% block main %}
-<h1>Home Page of {{user['username']}} you are in the top {{user['rank']}}% </h1>
+<h1>Felicitations jeune taupin!</h1>
 
-
+<ul id="user-data" class="hidden">
+    <li id="location">{{user['location']}} </li>
+    <li id="filiere">{{user['filiere']}} </li>
+    <li id="rank">{{user['rank']}} </li>
+</ul>
     
 <div class="row gtr-uniform">
     <div class="row gtr-uniform">
         <!--search bar -->
-        <div class="col-12">
+        <div class="col-12 hidden">
             <label for="search">barre de recherche</label>
         </div>
-        <div class="col-9 col-12-xsmall">
-            <input type="search" placeholder="ecole, filiere...">
+        <div class="col-12 hidden">
+            <input type="search" id="searchInput" placeholder="ecole, filiere...">
         </div>
-        <div class="col-3 col-12-xsmall">
-            <a class="button primary icon solid fa-search ">Search</a>
+
+        <!-- search table-->
+        <div id="searchTable" class="table-wrapper hidden">
+            <table id="searchTable" class="alt">
+                <tbody>
+                    <div id="searchTable" class="table-wrapper">
+                        <table id="searchTable" class="alt">
+                            <tbody>
+                                <tr> <td>Ecole Nationale d'Ingénieurs de Tunis</td> </tr>
+                                <tr> <td>Ecole Nationale d'Ingénieurs de Bizerte</td> </tr>
+                                <tr> <td>Ecole Nationale d'Ingénieurs de Sousse</td> </tr>
+                                <tr> <td>Ecole Nationale d'Ingénieurs de Monastir</td> </tr>
+                                <tr> <td>Ecole Nationale d'Ingénieurs de Sfax</td> </tr>
+                                <tr> <td>Ecole Nationale d'Ingénieurs de Gabès</td> </tr>
+                                <tr> <td>Faculté des Sciences de Tunis</td> </tr>
+                                <tr> <td>Ecole Nationale Supérieure d'Ingénieurs de Tunis</td> </tr>
+                                <tr> <td>Ecole Nationale d'ingénieurs de Carthage</td> </tr>
+                                <tr> <td>Ecole Nationale d'Electronique et des Télécommunications de Sfax</td> </tr>
+                                <tr> <td>Ecole Polytechnique de Tunisie</td> </tr>
+                                <tr> <td>Ecole Nationale des Sciences de l'Informatique</td> </tr>
+                                <tr> <td>Ecole Supérieure de la statistique et de l'Analyse de l'Information</td> </tr>
+                                <tr> <td>École Supérieure des Communications de Tunis</td> </tr>
+                                <tr> <td>Ecole Nationale des Sciences et Technologies Avancées De Borj Cedria</td> </tr>
+                                <tr> <td>Ecole Nationale d'Ingénieurs de Gafsa</td> </tr>
+                                <tr> <td>Institut National Agronomique de Tunisie</td> </tr>
+                                <tr> <td>Ecole Supérieure des Industries Alimentaires de Tunis</td> </tr>
+                                <tr> <td>Ecole Supérieure d'Ingénieurs de Medjez El Bab</td> </tr>
+                                <tr> <td>Ecole Supérieure d'Agriculture de Mateur</td> </tr>
+                                <tr> <td>Ecole Supérieure d'Agriculture de Mograne</td> </tr>
+                                <tr> <td>Ecole Supérieure d'Agriculture du Kef</td> </tr>
+                                <tr> <td>nstitut Supérieur Agronomique de Chott-Mariem</td> </tr>
+                                <tr> <td>Génie Chimique- Procédés</td> </tr>
+                                <tr> <td>Statistique et Analyse de l'Information</td> </tr>
+                                <tr> <td>Electronique Industrielle</td> </tr>
+                                <tr> <td>Agro- alimentaire</td> </tr>
+                                <tr> <td>Génie des Communications et Réseaux</td> </tr>
+                                <tr> <td>Génie Hydraulique et Environnement</td> </tr>
+                                <tr> <td>Production Animale</td> </tr>
+                                <tr> <td>Génie Electrique- Automatique</td> </tr>
+                                <tr> <td>Topographie</td> </tr>
+                                <tr> <td>Génie Mécanique</td> </tr>
+                                <tr> <td>Génie Informatique Industrielle</td> </tr>
+                                <tr> <td>Ingénierie des Données et Systèmes Décisionnels</td> </tr>
+                                <tr> <td>Horticulture</td> </tr>
+                                <tr> <td>Génie Energétique et Technologies de l'Environnement</td> </tr>
+                                <tr> <td>Génie Energétique</td> </tr>
+                                <tr> <td>Mécatronique</td> </tr>
+                                <tr> <td>Génie Electromécanique</td> </tr>
+                                <tr> <td>Génie Chimique Industriel et Minier</td> </tr>
+                                <tr> <td>Génie des Systèmes Horticoles</td> </tr>
+                                <tr> <td>Génie des Systèmes Industriels et Logistiques</td> </tr>
+                                <tr> <td>Production Animale et Fourragère</td> </tr>
+                                <tr> <td>Génie Mathématiques Appliquées et Modélisation</td> </tr>
+                                <tr> <td>Génie Rural, Eaux et Forêts</td> </tr>
+                                <tr> <td>Télécommunications</td> </tr>
+                                <tr> <td>Génie Productique</td> </tr>
+                                <tr> <td>Polytechnique</td> </tr>
+                                <tr> <td>Hydraulique et Amenagement</td> </tr>
+                                <tr> <td>Modélisation pour l'Industrie et Services</td> </tr>
+                                <tr> <td>Génie des Systèmes Electroniques et Communications</td> </tr>
+                                <tr> <td>Génie Informatique</td> </tr>
+                                <tr> <td>Techniques Avancées</td> </tr>
+                                <tr> <td>Génie Civil</td> </tr>
+                                <tr> <td>Génie Electrique</td> </tr>
+                                <tr> <td>Génie des Matériaux et Management Industriel</td> </tr>
+                                <tr> <td>Génie Textile</td> </tr>
+                                <tr> <td>Technologies Avancées</td> </tr>
+                                <tr> <td>Chimie Analytique et Instrumentation</td> </tr>
+                                <tr> <td>Informatique Appliquée</td> </tr>
+                                <tr> <td>Génie Télécommunications Embarquées</td> </tr>
+                                <tr> <td>Génie des Télécommunications</td> </tr>
+                                <tr> <td>Informatique</td> </tr>
+                                <tr> <td>Génie Industriel</td> </tr>
+                                <tr> <td>Génie Mécanique et Agro-Industriel</td> </tr>
+                                <tr> <td>Aménagement du Paysage</td> </tr>
+                                <tr> <td>Infotronique</td> </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </tbody>
+            </table>
         </div>
 
         <!-- Field buttons -->
         <div class="col-12">
             <label for="field">Filtrer par categorie</label>
-            <ul class="no-bullets ">
+            <ul class="filtring-btn">
                 <li><button class="button fit small" value="all">Tout</button></li>
                 <li><button class="button fit small" value="Computer Science and IT">Informatique et Technologies de l'Information</button></li>
                 <li><button class="button fit small" value="Energy, Industrial Engineering and Management">Énergie, Génie Industriel et Management</button></li>
@@ -85,6 +170,7 @@
                 <td>{{row[-1]}}%</td>
             </tr>
             {%endfor%}
+        </tbody>
     </table>
 
     <!-- Back Up button -->

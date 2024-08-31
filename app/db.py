@@ -1,4 +1,4 @@
-import json, sqlite3
+import sqlite3
 
 
 def ball(rank):
@@ -16,6 +16,6 @@ def ball(rank):
     
     # add diff
     y = lambda i: float( "{:.2f}".format(f(i[5])-rank) )
-    ball = [i+(y(i),) for i in ball]
+    ball = [i+(y(i),) for i in ball if i[5]<2000]
 
     return ball

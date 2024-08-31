@@ -2,7 +2,7 @@
 
 {%block nav%}
 <ul class="links">
-    <li class="active"><a>TBE</a></li>
+    <li class="active"><a>--</a></li>
     <li><a href="{{ url_for('main.guide') }}">Guide</a></li>
     <li><a href="{{ url_for('main.learn_more') }}">Learn More</a></li>
 </ul>
@@ -33,15 +33,10 @@
         <div class="col-12">
             <ul class="actions fit">
                 <li><button href="#main" type="submit" class="button primary fit">LOGIN</button></li>
+                <li><a href="{{ url_for('auth.sign_up') }}" class="button primary fit">SIGN UP</a></li>
             </ul>
         </div>
     </div>    
 </form>
 </hr>
-{%endblock%}
-
-{%block footer%}
-<section>
-    <h3><a href="{{ url_for('auth.sign_up') }}">First Time? Click here to Sign UP</a></h3>
-</section>
 {%endblock%}

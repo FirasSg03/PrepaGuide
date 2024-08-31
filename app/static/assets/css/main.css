@@ -2440,10 +2440,6 @@ a.image:hover img {
 
 /* Actions */
 
-ul.no-bullets {
-    list-style-type: none;
-}
-
 ul.actions {
     display: -moz-flex;
     display: -webkit-flex;
@@ -4428,7 +4424,13 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 }
 
 
-/* Extra */
+/* ###################### Extra ###################### */
+
+
+/*Search Bar tables*/
+
+
+/*Sliders*/
 
 .slidecontainer {
     width: 100%;
@@ -4488,6 +4490,20 @@ body.is-preload #intro:not(.hidden)+#header+#nav {
 .table-sortable .th-sort-asc::after,
 .table-sortable .th-sort-desc::after {
     margin-left: 5px;
+}
+
+
+/*user data*/
+
+.hidden {
+    display: none;
+}
+
+
+/*filtring buttons in home page*/
+
+ul.filtring-btn {
+    list-style-type: none;
 }
 
 

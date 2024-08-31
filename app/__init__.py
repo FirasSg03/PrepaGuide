@@ -12,17 +12,17 @@ def create_app():
     db.init_app(app)
     login_manager.init_app(app)
     
+    # create databases and tables if they do not exist
+    from .models import User, Table, Data
+    with app.app_context():
+        db.create_all()
+    
     #import and register blueprints
     from . import auth, routes
     app.register_blueprint(auth.bp)
     app.register_blueprint(routes.bp)   
-        
-    #with app.app_context(): #########################
-        #db.drop_all()
-        #db.create_all()
-        #db.create_all(bind=['data'])
-
-    from .models import User 
+ 
+    #return active session
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))

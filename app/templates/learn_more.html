@@ -2,21 +2,12 @@
 
 {%block nav%}
 <ul class="links">
-    <li><a>TBE</a></li>
+    <li><a href=" {{ url_for('auth.sign_up') }} ">Acceuil</a></li>
     <li><a href="{{ url_for('main.guide') }}">Guide</a></li>
     <li class="active"><a href="{{ url_for('main.learn_more') }}">Learn More</a></li>
 </ul>
 {%endblock%}
 
-{%block main%}
-learn more page
-1. rang pour admission likelihood
-2. gov pour distance
-{%endblock%}
+{%block main%}{%endblock%}
 
-{%block footer%}
-<section>
-    <!-- Takes to home page -->
-    <li><a class="button primary fit">Home</a></li>
-</section>
-{%endblock%}
+{%block footer%}{%endblock%}
