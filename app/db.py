@@ -3,7 +3,7 @@ import sqlite3
 
 def ball(rank):
     #connect to the database
-    conn = sqlite3.connect('instance\database.db')
+    conn = sqlite3.connect('instance/database.db')
     cursor = conn.cursor()
     
     # percentages
@@ -17,5 +17,6 @@ def ball(rank):
     # add diff
     y = lambda i: float( "{:.2f}".format(f(i[5])-rank) )
     ball = [i+(y(i),) for i in ball if i[5]<2000]
+    # (ecole, filiere, gov, rang, diff)
 
     return ball

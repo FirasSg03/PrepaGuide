@@ -143,7 +143,7 @@ const inRange = (x, y) => {
 };
 
 //sorting table from table header
-function sortTableByColumn(table, column, asc = true) {
+function sortDesktopTableByColumn(table, column, asc = true) {
     const dirModifier = asc ? 1 : -1;
     const tBody = table.tBodies[0];
     const rows = Array.from(tBody.querySelectorAll("tr"));
@@ -179,16 +179,6 @@ function sortTableByColumn(table, column, asc = true) {
     table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-asc", asc);
     table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-desc", !asc);
 }
-document.querySelectorAll("table th").forEach(headerCell => {
-    headerCell.addEventListener("click", () => {
-        const tableElement = headerCell.parentElement.parentElement.parentElement;
-        const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
-        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
-
-        // sort table
-        sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
-    });
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     let filter = 'all';
@@ -196,21 +186,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const rows = document.querySelectorAll('table.table-sortable tbody tr');
 
     //filter by category & leniency
-    function filterTable() {
+    function filterDesktopTable() {
         rows.forEach(row => {
-            const filiere = row.querySelector('td:nth-child(2)').textContent.trim();
-            const location = row.querySelector('td:nth-child(3)').textContent.trim();
-            const diff = row.querySelector('td:nth-child(5)').textContent.trim();
+            try {
+                const filiere = row.querySelector('td:nth-child(2)').textContent.trim();
+                const location = row.querySelector('td:nth-child(3)').textContent.trim();
+                const diff = row.querySelector('td:nth-child(5)').textContent.trim();
 
-            const categoryMatch = filter === 'all' || data[filter].includes(filiere);
-            const sliderMatch = inRange(diff, tslider.value);
-            const distanceMatch = calcDistance(location, pslider.value);
+                const categoryMatch = filter === 'all' || data[filter].includes(filiere);
+                const sliderMatch = inRange(diff, tslider.value);
+                const distanceMatch = calcDistance(location, pslider.value);
 
-            if (categoryMatch && sliderMatch && distanceMatch) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
+                if (categoryMatch && sliderMatch && distanceMatch) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            } catch (error) {
+                console.log("pass: filterDesktopTable")
             }
+
         });
     }
 
@@ -223,8 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         searchRows.forEach(row => {
             const rowText = row.textContent.toLowerCase();
-
-
             if (rowText.includes(searchFilter)) {
                 row.style.display = '';
             } else {
@@ -234,29 +227,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //change color of diff
-    function changeColor() {
+    function changeColorDesktopTable() {
         rows.forEach(row => {
-            const cell = row.querySelector('td:nth-child(5)');
-            const cellValue = parseFloat(cell.textContent.trim());
-            if (!isNaN(cellValue)) {
-                if (cellValue > 0) {
-                    cell.classList.add('positive');
-                } else if (cellValue < 0) {
-                    cell.classList.add('negative');
+            try {
+                const cell = row.querySelector('td:nth-child(5)');
+                const cellValue = parseFloat(cell.textContent.trim());
+
+                if (!isNaN(cellValue)) {
+                    if (cellValue > 0) {
+                        cell.classList.add('positive');
+                    } else if (cellValue < 0) {
+                        cell.classList.add('negative');
+                    }
                 }
+            } catch (error) {
+                console.log("pass");
             }
+
         });
     }
+    /* For Desktop size Screen */
+    if (window.innerWidth >= 600) {
+        document.querySelectorAll("table th").forEach(headerCell => {
+            headerCell.addEventListener("click", () => {
+                const tableElement = headerCell.parentElement.parentElement.parentElement;
+                const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+                const currentIsAscending = headerCell.classList.contains("th-sort-asc");
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            filter = button.value;
-            filterTable();
+                // sort table
+                sortDesktopTableByColumn(tableElement, headerIndex, !currentIsAscending);
+            });
         });
-    });
 
-    tslider.addEventListener('input', filterTable);
-    pslider.addEventListener('input', filterTable);
-    searchInput.addEventListener('input', searchBar);
-    changeColor();
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                filter = button.value;
+                filterDesktopTable();
+            });
+        });
+
+        tslider.addEventListener('input', filterDesktopTable);
+        pslider.addEventListener('input', filterDesktopTable);
+        searchInput.addEventListener('input', searchBar);
+        changeColorDesktopTable();
+    }
+
 });

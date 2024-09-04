@@ -18,4 +18,4 @@ def learn_more():
 def index():
     user = current_user.to_dict()
     
-    return render_template('filter/index.html', user=user, ball=ball(user['rank']))
+    return render_template('filter/index.html', user=user, ball=ball(user['rank']), rows=["Filiere", "Gouvernorat", "Rang", "Diff"])

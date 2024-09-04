@@ -4507,4 +4507,13 @@ ul.filtring-btn {
 }
 
 
+/* changing table structure based on screen size*/
+
+@media (max-width: 750px) {
+    .desktop-table {
+        display: none;
+    }
+}
+
+
 /* end of extra*/

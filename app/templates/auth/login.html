@@ -33,10 +33,17 @@
         <div class="col-12">
             <ul class="actions fit">
                 <li><button href="#main" type="submit" class="button primary fit">LOGIN</button></li>
-                <li><a href="{{ url_for('auth.sign_up') }}" class="button primary fit">SIGN UP</a></li>
             </ul>
         </div>
     </div>    
 </form>
 </hr>
+{%endblock%}
+
+{%block footer%}
+<footer id="footer">
+    <section>
+        <h3><a href="{{ url_for('auth.sign_up') }}">First Time? Click here to Sign UP</a></h3>
+    </section>
+ </footer>
 {%endblock%}
