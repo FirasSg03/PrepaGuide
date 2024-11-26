@@ -24,6 +24,19 @@ Did you implement any techniques to handle dynamic or JavaScript-heavy websites?
 How did you handle large-scale scraping (e.g., throttling, proxies)?
 Were there ethical considerations in your scraping process (e.g., terms of service, user consent)?
 Did you preprocess or clean the data after scraping? How?
+# Data Processing
+What was the structure of the raw data (e.g., unstructured, semi-structured)?
+Did you clean the data? If so, what methods did you use (e.g., removing duplicates, handling null values)?
+How did you organize the data (e.g., sorting, categorizing, filtering)?
+What tools or libraries did you use for processing (e.g., pandas, Excel, SQL)?
+Did you transform the data format (e.g., JSON to CSV)?
+Did you combine or merge data from multiple sources? How?
+How did you handle missing or inconsistent data?
+Were there any patterns or anomalies discovered during processing?
+How did you ensure the processed data was ready for use (e.g., validation steps)?
+Was the processing automated? If so, how (e.g., scripts, pipelines)?
+Did you encounter any challenges while processing the data?
+Was the processed data stored or exported? If so, where and in what format?
 # Data Analysis
 What type of analysis did you perform (e.g., statistical, predictive, exploratory)?
 What tools or programming languages did you use for analysis (e.g., Python, R, SQL)?
