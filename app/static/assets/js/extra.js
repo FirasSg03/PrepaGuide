@@ -46,7 +46,8 @@ const data = {
         "Génie des Matériaux et Management Industriel",
         "Génie des Systèmes Industriels et Logistiques",
         "Technologies Avancées",
-        "Génie Productique"
+        "Génie Productique",
+        "Hydraulique et Aménagement"
     ],
     "Mechanical, Electrical and Civil Engineering": [
         "Génie Mécanique",
@@ -62,7 +63,8 @@ const data = {
     "Chemical and Biological Engineering": [
         "Génie Chimique- Procédés",
         "Génie Chimique Industriel et Minier",
-        "Chimie Analytique et Instrumentation"
+        "Chimie Analytique et Instrumentation",
+        "Génie Biologique"
     ],
     "Agricultural and Environmental Engineering": [
         "Génie Mécanique et Agro-Industriel",
@@ -74,7 +76,10 @@ const data = {
         "Génie Rural, Eaux et Forêts",
         "Génie Energétique et Technologies de l'Environnement",
         "Production Animale",
-        "Topographie"
+        "Topographie",
+        "Agro-alimentaire",
+        "Géo Resources et Environnement",
+        "Topographie et Géomatique"
     ],
     "Textile and Material Engineering": [
         "Génie Textile"

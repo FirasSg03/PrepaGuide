@@ -6,7 +6,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
     location = db.Column(db.String(150))
-    filiere = db.Column(db.String(150))
+    section = db.Column(db.String(150))
     rank = db.Column(db.Integer)
     tables = db.relationship('Table')
     
@@ -15,7 +15,7 @@ class User(db.Model, UserMixin):
             "id": self.id, 
             "username": self.username,
             "location": self.location,
-            "filiere": self.filiere,
+            "section": self.section,
             "rank": self.rank
         }
     

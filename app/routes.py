@@ -17,5 +17,7 @@ def learn_more():
 @login_required
 def index():
     user = current_user.to_dict()
+    rank = user['rank']
+    section = user['section']
     
-    return render_template('filter/index.html', user=user, ball=ball(user['rank']), rows=["Filiere", "Gouvernorat", "Rang", "Diff"])
+    return render_template('filter/index.html', user=user, ball=ball(rank, section))

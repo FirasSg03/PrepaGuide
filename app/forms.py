@@ -7,7 +7,7 @@ def valid_sign_up(request):
     password = request.form['password']
     confirm_password = request.form['confirm_password']
     location = request.form['location']
-    filiere = request.form['filieres']
+    section = request.form['sections']
     rank = request.form['rank']
     
     user = User.query.filter_by(username=username).first()
@@ -24,7 +24,7 @@ def valid_sign_up(request):
             username=username,
             password = generate_password_hash(password),
             location = location,
-            filiere = filiere,
+            section = section,
             rank = int(rank)
             )
         return new_user
