@@ -53,6 +53,55 @@ Did you design the user interface? If so, what tools did you use (e.g., Figma, C
 How did you ensure a good user experience (e.g., responsiveness, accessibility)?
 Is the web app deployed? If so, where (e.g., Heroku, AWS)?
 Did you implement any security measures (e.g., authentication, data encryption)?
+# Databases
+What database did you use (e.g., MySQL, MongoDB)?
+How did you structure the database (e.g., tables, collections)?
+What tools or libraries did you use to interact with the database (e.g., SQLAlchemy, PyMongo)?
+How did you store the processed data in the database?
+Did you optimize the database for performance (e.g., indexing, normalization)?
+How did you handle database connections in your app?
+Was the database hosted locally or on a cloud service?
+Did you implement any backup or data recovery measures?
+How did you query the data for the web app?
+# APIs
+Did you use any external APIs for data? If so, which ones?
+What type of API did you build or consume (e.g., REST, GraphQL)?
+How did you authenticate with the API (e.g., API keys, OAuth)?
+What tools or libraries did you use for API integration (e.g., requests, Axios)?
+Did you design your own API? If so, what endpoints did it have?
+How did your API handle requests and responses?
+Did you implement rate-limiting or error handling for the API?
+Was the API integrated into the web app for live data?
+# Testing
+What testing framework did you use (e.g., Pytest, Jest)?
+Did you write unit tests, integration tests, or both?
+How did you ensure the coverage of critical parts of your project?
+Did you use any tools for automated testing (e.g., Selenium, Postman)?
+How did you handle test-driven development (TDD) or debugging during the testing phase?
+# Task Automation
+What tasks did you automate (e.g., data processing, deployment)?
+What tools or libraries did you use for task automation (e.g., Celery, Cron jobs)?
+How did you manage task scheduling and execution?
+Did you set up any monitoring or alerts for automated tasks?
+How did task automation improve your project's efficiency or reliability?
+# Authentication
+What authentication method did you use (e.g., JWT, OAuth, session-based)?
+How did you manage user sessions or tokens?
+Did you implement any access control or user roles in your app?
+How did you handle password storage and security?
+Did you integrate any third-party authentication providers (e.g., Google, Facebook)?
+# Containerization
+What containerization tool did you use (e.g., Docker)?
+How did you create and configure your Docker containers?
+Did you use Docker Compose for multi-container applications?
+How did you ensure portability and environment consistency using containers?
+How did containerization improve the deployment or scaling of your project?
+# Version Control
+What version control system did you use (e.g., Git, GitHub)?
+How did you structure your branches (e.g., main, feature, development)?
+Did you use any version control strategies (e.g., GitFlow, trunk-based development)?
+How did you manage pull requests and code reviews?
+Did you implement any CI/CD pipelines with version control?
 # Technical Challenges and Solutions
 What were the biggest technical hurdles during data scraping?
 Did you face challenges with data storage or processing large datasets?
