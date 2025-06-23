@@ -16,7 +16,7 @@ Data is extracted from **official PDF documents** (results, reports, and orienta
 ## Installation
 ```bash
 git clone https://github.com/FirasSg03/PrepaGuide.git
-cd prepaguide
+cd PrepaGuide
 pip install -r requirements.txt
 python -m flask run
 ```
