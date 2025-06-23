@@ -11,7 +11,7 @@ An app to centralize and simplify the orientation process for Tunisian prepa stu
 Data is extracted from **official PDF documents** (results, reports, and orientation guides) provided by the Tunisian Ministry of Higher Education. These PDFs are processed and cleaned using custom scripts (see the [data-workflow](https://github.com/FirasSg03/data-workflow) repository).
 - **Frontend**: HTML5-up compiled sass, css & vanilla js
 - **Backend**: Flask.
-- **Database**: RDB: SQLite via SQLAlchemy ORM
+- **Database**: SQLite via SQLAlchemy ORM
 
 ## Installation
 ```bash
