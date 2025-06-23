@@ -9,7 +9,7 @@ web app that helps Tunisian prepa students with their orientation
 ## Description
 An app to centralize and simplify the orientation process for Tunisian prepa students by offering clear, structured information about schools, branches, and access requirements.
 Data is extracted from **official PDF documents** (results, reports, and orientation guides) provided by the Tunisian Ministry of Higher Education. These PDFs are processed and cleaned using custom scripts (see the [data-workflow](https://github.com/FirasSg03/data-workflow) repository).
-- **Frontend**: HTML5-up compiled sass, css & vanilla js
+- **Frontend**: HTML5-up compiled scss, css & vanilla js
 - **Backend**: Flask.
 - **Database**: SQLite via SQLAlchemy ORM
 
